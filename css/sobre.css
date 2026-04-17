@@ -164,6 +164,7 @@ input[type="text"]::placeholder {
 }
 
 .about-section {
+  position: relative;
   flex: 1;
   width: min(1200px, 100%);
   margin: 0 auto;
@@ -175,7 +176,33 @@ input[type="text"]::placeholder {
   margin-top: clamp(8px, 2vh, 20px);
 }
 
+.decor-poligonos-texto {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.decor-poligono-sobre {
+  width: clamp(30px, 3vw, 44px);
+  margin-top: 500px;
+  height: auto;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.decor-poligono-1 {
+  transform: rotate(-14deg);
+}
+
+.decor-poligono-2 {
+  width: clamp(26px, 2.7vw, 38px);
+  transform: rotate(12deg);
+}
+
 .about-text {
+  position: relative;
+  z-index: 2;
   max-width: 620px;
   width: min(100%, 620px);
   margin: 0 auto;
@@ -225,6 +252,16 @@ input[type="text"]::placeholder {
   justify-content: space-between;
   overflow: visible;
   isolation: isolate;
+}
+
+.decor-triangulo-sobre {
+  position: absolute;
+  top: -50px;
+  right: -460px;
+  width: clamp(78px, 9vw, 130px);
+  height: auto;
+  z-index: -1;
+  pointer-events: none;
 }
 
 /* Efeito de luz de fundo */
@@ -313,6 +350,7 @@ input[type="text"]::placeholder {
   color: #171414;
   font-size: clamp(16px, 2.4vw, 20px);
   font-weight: 700;
+  font-family: "Baloo Bhai 2", sans-serif;
   margin: clamp(18px, 3vw, 30px) 0 clamp(18px, 5vw, 40px);
   transform: translateY(4px); /* antes: -4px */
 }
@@ -390,8 +428,19 @@ input[type="text"]::placeholder {
     padding: 0 12px;
   }
 
+  .decor-poligonos-texto {
+    margin-top: 10px;
+    gap: 8px;
+  }
+
   .about-card {
     width: min(96vw, 620px);
+  }
+
+  .decor-triangulo-sobre {
+    top: -24px;
+    right: -18px;
+    width: clamp(70px, 16vw, 98px);
   }
 }
 
